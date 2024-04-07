@@ -30,9 +30,11 @@ allprojects {
 	repositories {
 		mavenCentral()
 		if (version.contains('-')) {
-			maven { url "https://repo.spring.io/milestone" }
+			maven { url 'https://maven.aliyun.com/repository/public/'}
+
 		}
 		if (version.endsWith('-SNAPSHOT')) {
+			maven { url 'https://maven.aliyun.com/repository/public/'}
 			maven { url "https://repo.spring.io/snapshot" }
 		}
 	}
